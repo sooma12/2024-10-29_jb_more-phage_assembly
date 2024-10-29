@@ -4,8 +4,8 @@
 #SBATCH --time=04:00:00
 #SBATCH -N 1
 #SBATCH -n 2
-#SBATCH --output=/work/geisingerlab/Mark/genome_assembly/2024-10-21_jb_phage-assembly/logs/%x-%j.output
-#SBATCH --error=/work/geisingerlab/Mark/genome_assembly/2024-10-21_jb_phage-assembly/logs/%x-%j.error
+#SBATCH --output=/work/geisingerlab/Mark/genome_assembly/2024-10-29_jb_more-phage_assembly/logs/%x-%j.output
+#SBATCH --error=/work/geisingerlab/Mark/genome_assembly/2024-10-29_jb_more-phage_assembly/logs/%x-%j.error
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=soo.m@northeastern.edu
 

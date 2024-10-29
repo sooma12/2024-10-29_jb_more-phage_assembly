@@ -21,20 +21,29 @@ the ‘DNA Sequencing Stats.xlsx’ file.
 ```
 
 ## Samples
-/work/geisingerlab/SEQCENTER-SEQUENCINGREADS-BACKUP/20241013_IlluminaDNAReads_JBA420-421-JBphis
 
-4 JBphi samples to work with:
+Input from EG:
 
-JBphi20
-JBphi21
-JBphi36
-JBphi44
+`/work/geisingerlab/SEQCENTER-SEQUENCINGREADS-BACKUP/20230707_IlluminaDNAReads_JBphi9_15/
+phage_9
+phage_15A
+phage_15B
+phage_15C`
+
+`/work/geisingerlab/SEQCENTER-SEQUENCINGREADS-BACKUP/20230828_SeqCenter_IlluminaDNAReads_JBphi_bulk/
+bulk1
+bulk2
+bulk7`
+
 
 Made links to these files in ./input/fastq_raw
 
 ```bash
 cd ${BASE_DIR}/input/fastq_raw
-find /work/geisingerlab/SEQCENTER-SEQUENCINGREADS-BACKUP/20241013_IlluminaDNAReads_JBA420-421-JBphis -name "JBphi*" >fastq_inputs.list
+find /work/geisingerlab/SEQCENTER-SEQUENCINGREADS-BACKUP/20230707_IlluminaDNAReads_JBphi9_15/ -name "phage*" >>fastq_inputs.list
+find /work/geisingerlab/SEQCENTER-SEQUENCINGREADS-BACKUP/20230828_SeqCenter_IlluminaDNAReads_JBphi_bulk/ -name "bulk*" >>fastq_inputs.list 
+
+cat fastq_inputs.list
 
 paste fastq_inputs.list | while read file;
 do
