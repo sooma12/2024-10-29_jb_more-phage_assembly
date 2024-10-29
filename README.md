@@ -1,11 +1,5 @@
 # 2024-10-29_jb_more-phage_assembly
 
-
-
-*below copied from 10/21/24 readme*
-
-
-
 ## Library prep
 
 From Seqcenter:
@@ -56,7 +50,7 @@ done
 First run using script 0
 
 ## bbduk
-Per assembly protocol from Eddie (provided by collaborators?), ran bbduk to remove phix.  This resulted in 0 dropped reads, so there are no contaminants.  Therefore, went back to original files and performed quality trimming per their recommendations.
+Performed quality trimming per collaborators' recommendations.
 
 Options:
 ref=/bioinformatics/bbmap/resources/adapters.fa ktrim=r tpe tbo minlen=100
@@ -66,8 +60,8 @@ qtrim=rl trimq=28
 
 ```text
 for file in ./*.fastq.gz; do
-> echo $(zcat $file | wc -l )/4 | bc
-> done
+echo $(zcat $file | wc -l )/4 | bc
+done
 
 ```
 
@@ -98,6 +92,12 @@ done
 ```
 
 
+
+*below copied from 10/21/24 readme*
+
+
+
+
 ## Assembly
 
 Assembled using SPAdes with suggested parameters:
@@ -109,6 +109,8 @@ Go into spades_assembly directory and count contigs and scaffolds:
 ```bash
 for dir in ./*; do echo $dir; echo 'contigs:'; grep -c '>' $dir/contigs.fasta; echo 'scaffolds:'; grep -c '>' $dir/scaffolds.fasta; done
 ```
+
+Output (counts):
 
 ```text
 
