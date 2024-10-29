@@ -2,12 +2,12 @@
 #SBATCH --partition=short
 #SBATCH --job-name=bbduk-kqtrim
 #SBATCH --time=04:00:00
-#SBATCH --array=1-4%5
-#SBATCH --ntasks=4
+#SBATCH --array=1-7%8
+#SBATCH --ntasks=7
 #SBATCH --mem=100G
 #SBATCH --cpus-per-task=8
-#SBATCH --output=/work/geisingerlab/Mark/genome_assembly/2024-10-21_jb_phage-assembly/logs/%x-%A-%a.log
-#SBATCH --error=/work/geisingerlab/Mark/genome_assembly/2024-10-21_jb_phage-assembly/logs/%x-%A-%a.err
+#SBATCH --output=/work/geisingerlab/Mark/genome_assembly/2024-10-29_jb_more-phage_assembly/logs/%x-%A-%a.log
+#SBATCH --error=/work/geisingerlab/Mark/genome_assembly/2024-10-29_jb_more-phage_assembly/logs/%x-%A-%a.err
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=soo.m@northeastern.edu
 

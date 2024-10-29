@@ -76,7 +76,7 @@ Per protocol,
 
 Number of reads = (Expected coverage * Expected genome size in bp) / Read length in bp
 
-Read length = 151?
+Read length = 151
 Use expected coverage = 100
 Per EG, expect ~43 kb genome.
 
@@ -86,7 +86,7 @@ Ran following code:
 
 ```bash
 module load seqtk/1.3
-cd /work/geisingerlab/Mark/genome_assembly/2024-10-21_jb_phage-assembly/input/fastq_trimmed
+cd /work/geisingerlab/Mark/genome_assembly/2024-10-29_jb_more-phage_assembly/input/fastq_trimmed
 
 mkdir -p ../fastq_subsamples
 
@@ -111,26 +111,7 @@ for dir in ./*; do echo $dir; echo 'contigs:'; grep -c '>' $dir/contigs.fasta; e
 ```
 
 ```text
-./JBphi_20
-contigs:
-2
-scaffolds:
-2
-./JBphi_21
-contigs:
-2
-scaffolds:
-2
-./JBphi_36
-contigs:
-2
-scaffolds:
-2
-./JBphi_44
-contigs:
-7
-scaffolds:
-7
+
 ```
 
 
